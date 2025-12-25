@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Current Date in Words</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Days in words
+            var days = [
+                "First", "Second", "Third", "Fourth", "Fifth", "Sixth",
+                "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth",
+                "Thirteenth", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth",
+                "Eighteenth", "Nineteenth", "Twentieth", "Twenty First", "Twenty Second",
+                "Twenty Third", "Twenty Fourth", "Twenty Fifth", "Twenty Sixth",
+                "Twenty Seventh", "Twenty Eighth", "Twenty Ninth", "Thirtieth", "Thirty First"
+            ];
+
+            // Months in words
+            var months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            // Get current date
+            var dateObj = new Date();
+            var currDate = dateObj.getDate();       // 1-31
+            var currMonth = dateObj.getMonth();     // 0-11
+            var currYear = dateObj.getFullYear();   // 4-digit year
+
+            // Display date in words
+            var dateInWords = "Today's Date: " + days[currDate - 1] + " " + months[currMonth] + " " + currYear;
+            alert(dateInWords);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
