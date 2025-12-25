@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Number Object Demo</title>
+
+    <script type="text/javascript">
+        // Number object properties
+        var largest = Number.MAX_VALUE;
+        var smallest = Number.MIN_VALUE;
+
+        document.write("<b>The largest number is:</b> " + largest + "<br/>");
+        document.write("<b>The smallest number is:</b> " + smallest + "<br/><br/>");
+
+        // Number methods - toString with different bases
+        var num = new Number(15);
+        document.write("The number as a string (base 2): " + num.toString(2) + "<br/>");
+        document.write("The number as a string (base 8): " + num.toString(8) + "<br/><br/>");
+
+        // toFixed() method
+        var num2 = new Number(1337.14159);
+        document.write("num2.toFixed(0): " + num2.toFixed(0) + "<br/>");
+        document.write("num2.toFixed(1): " + num2.toFixed(1) + "<br/>");
+        document.write("num2.toFixed(3): " + num2.toFixed(3) + "<br/>");
+    </script>
+</head>
+
+<body>
+</body>
+</html>
