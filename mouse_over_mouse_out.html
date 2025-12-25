@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Mouse Over and Mouse Out</title>
+
+    <style type="text/css">
+        #image1, #image2 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #image2 {
+            visibility: hidden;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function changeImage() {
+            var img1 = document.getElementById("image1");
+            var img2 = document.getElementById("image2");
+
+            if (img1.style.visibility === "visible") {
+                img1.style.visibility = "hidden";
+                img2.style.visibility = "visible";
+            } else {
+                img1.style.visibility = "visible";
+                img2.style.visibility = "hidden";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <img src="image1.jpg"
+         id="image1"
+         alt="Image One"
+         onmouseover="changeImage()"
+         onmouseout="changeImage()"
+         style="visibility:visible;" />
+
+    <img src="image2.jpg"
+         id="image2"
+         alt="Image Two"
+         onmouseover="changeImage()"
+         onmouseout="changeImage()" />
+</body>
+</html>
