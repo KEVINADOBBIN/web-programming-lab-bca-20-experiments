@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Sum of Natural Numbers</title>
+    <script type="text/javascript">
+        function sumOfNaturalNumbers() {
+            var num = window.prompt("Enter the value of N:");
+            var n = parseInt(num);
+
+            if (isNaN(n) || n <= 0) {
+                alert("Please enter a valid positive number!");
+                return;
+            }
+
+            var sum = (n * (n + 1)) / 2;
+            alert("Sum of first " + n + " natural numbers is: " + sum);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="Find Sum of Natural Numbers" onclick="sumOfNaturalNumbers()" />
+    </form>
+</body>
+</html>
