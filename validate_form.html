@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Validate Text Boxes</title>
+    <script type="text/javascript">
+        function validate(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var myArray = [];
+            var formElements = document.forms["myForm"].elements;
+
+            for (var i = 0; i < formElements.length; i++) {
+                var element = formElements[i];
+                if (element.type === "text" && element.value.trim() === "") {
+                    myArray.push(element.name);
+                }
+            }
+
+            if (myArray.length != 0) {
+                alert("The following text boxes are empty: " + myArray.join(", "));
+            } else {
+                alert("All text boxes are filled!");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form name="myForm" onsubmit="validate(event)">
+        Name: <input type="text" name="Name" /><br/><br/>
+        Class: <input type="text" name="Class" /><br/><br/>
+        Age: <input type="text" name="Age" /><br/><br/>
+        <input type="submit" value="Send Message" />
+    </form>
+
+</body>
+</html>
