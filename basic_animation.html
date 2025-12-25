@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Basic Animation</title>
+    <style>
+        #layer1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #layer2 {
+            position: absolute;
+            top: 50px;
+            left: 150px;
+        }
+        #layer3 {
+            position: absolute;
+            top: 50px;
+            left: 250px;
+        }
+        img {
+            width: 50px; /* optional: set image size */
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        function moveImage(layerId) {
+            var top = window.prompt("Enter Top value in pixels:");
+            var left = window.prompt("Enter Left value in pixels:");
+
+            // Convert inputs to numbers
+            top = parseInt(top);
+            left = parseInt(left);
+
+            if (!isNaN(top) && !isNaN(left)) {
+                var element = document.getElementById(layerId);
+                element.style.top = top + "px";
+                element.style.left = left + "px";
+            } else {
+                alert("Please enter valid numeric values!");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="layer1">
+        <img src="ball.jpg" onclick="moveImage('layer1')" alt="My Image 1" />
+    </div>
+
+    <div id="layer2">
+        <img src="ball.jpg" onclick="moveImage('layer2')" alt="My Image 2" />
+    </div>
+
+    <div id="layer3">
+        <img src="ball.jpg" onclick="moveImage('layer3')" alt="My Image 3" />
+    </div>
+
+</body>
+</html>
