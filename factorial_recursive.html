@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Factorial of a Number</title>
+
+    <script type="text/javascript">
+        function findFactorial() {
+            var num = window.prompt("Enter value of N:");
+            var n = parseInt(num);
+
+            if (isNaN(n) || n < 0) {
+                alert("Please enter a valid non-negative number");
+                return;
+            }
+
+            alert("Factorial of " + n + " is " + fact(n));
+        }
+
+        function fact(n) {
+            if (n === 0)
+                return 1;
+            else
+                return n * fact(n - 1);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button"
+               value="Find Factorial of Number"
+               onclick="findFactorial()" />
+    </form>
+</body>
+</html>
